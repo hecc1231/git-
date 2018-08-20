@@ -12,10 +12,14 @@ https://github.com/hecc1231/python-notebook.git
 7. git push -u origin master (将本地master的文件全部上传到origin云端仓库)
 8. 后续上传就可以简单用git push origin master
 
-# 出现连接不上的原因可能是没有设置SSHkey(在一台机器上第一次安装会出现这个问题)
+# 出现连接不上的原因是没有设置SSHkey(在机器上第一次安装会出现这个问题)
 利用命令 ssh-keygen -t rsa -C 'hecc1231'
 然后连按三个空格键即可
 然后找到.ssh/id_ras.pub, 复制内容到github的Setting的SSH Key中去
 
 # 回滚版本
-git reset --hard commit_id(commit_id 可以利用git log 命令查看)
+git reset --hard commit_id (commit_id 可以利用git log 命令查看)
+# 回退版本再回来
+要是回到之前版本又想回来, 此时git log 已经看不到最初的commit_id,需要使用:
+git reflog， 记录每次push的commit id
+
