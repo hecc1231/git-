@@ -19,7 +19,6 @@ https://github.com/hecc1231/python-notebook.git
 
 # 回滚版本
 git reset --hard commit_id (commit_id 可以利用git log 命令查看)
-# 回退版本再回来
-要是回到之前版本又想回来, 此时git log 已经看不到最初的commit_id,需要使用:
+若从V2回退版本V1之后再恢复V2, 此时git log 已经看不到最初的commit_id,需要使用:
 git reflog， 记录每次push的commit id
 
